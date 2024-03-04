@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--Datos Informativos-->
+
+<head>
+    <!--Metadatos-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!------------->
+
+    <!--Links-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/Logo T - Naranja C.png">
+    <!--------->
+
+    <!--Otros-->
+    <title>Distrito Tintal</title>
+    <!--------->
+</head>
+<!---------------------->
+
+<body>
+
+    <!--Cabezera de la Web-->
+    <header class="header">
+
+        <!--Menu de Navegacion-->
+        <div class="menu container">
+
+            <a href="#" class="logo"><img src="img/Logo IASD DIstrito Tintal.png" height="50px" alt="Logo"></a>
+
+            <a href="#" class="logo" id="audioButton">
+                <img src="img/Logo Audio.png" height="50px" alt="Musica">
+            </a>
+            <audio id="audio" src="audios/PEACE - DEEP INSTRUMENTAL WORSHIP -  (NO COPYRIGHT MUSIC).mp4"></audio>
+
+            <input type="checkbox" id="menu"/>
+            <label for="menu">
+                <img src="img/Logo Menu.png" class="menu-icono" alt="menu">
+            </label>
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Live</a></li>
+                    <li><a href="#">Programas</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!---------------------->
+
+        <div class="header-content container">
+            <div class="header-txt">
+                <h1>40 dias de Oración</h1>
+                <p>
+                    "Pasos para un Reavivamiento Espiritual"
+                </p>
+                <a href="https://www.youtube.com/watch?v=LpeqcyV5BYs&list=PLZ0yIOXiQ3mXSKLLZZ2uwHkO_1blWqOkc&ab_channel=AlexisGoitia" class="btn-1" target="_blank">Ver</a>
+            </div>
+        </div>
+
+    </header>
+    <!---------------------->
+
+    <!--Nosotros-->
+    <section class="about">
+
+        <div class="about-content container">
+
+            <div class="about-txt">
+                <span>Distrito Tintal</span>
+                <h2>Bienvenidos Dios les Bendiga</h2>
+                <hr>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ipsa necessitatibus consectetur
+                    nesciunt, quo porro dolores consequatur eligendi perspiciatis culpa voluptatum, mollitia libero
+                    dolorem impedit corporis ipsum, ut beatae. Veritatis!
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ipsa necessitatibus consectetur
+                    nesciunt, quo porro dolores consequatur eligendi perspiciatis culpa voluptatum, mollitia libero
+                    dolorem impedit corporis ipsum, ut beatae. Veritatis!
+                </p>
+            </div>
+
+            <div class="about-img">
+                <!--<img src="img/Name IASD.jpg" alt="">-->
+                <video id="miVideo" width="640" height="360" autoplay loop onclick="togglePlayPause()">
+                    <source src="video/Publicidad Distrito Tintal 2024.mp4" id="video" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+            </div>
+
+        </div>
+
+    </section>
+    <!----------->
+
+    <!--Testimonios-->
+    <section class="testimonial">
+        <span>Distrito Tintal</span>
+        <h2>Programas</h2>
+
+        <div class="testimonial-content container">
+            <div class="testimonial-1">
+                <img class="face" src="img/Ven a Jesus.jpg" alt="">
+                <h4>Ven a Jesús</h4>
+                <p>Programa virtual para Lideres de grupos pequeños</p>
+                <img class="start" src="img/Stars.webp" alt="">
+            </div>
+
+            <div class="testimonial-1">
+                <img class="face" src="img/40 Dias de Oracion .jpg" alt="Logo">
+                <h4>40 dias de Oración</h4>
+                <p>Pasos para un Reavivamiento Espiritual</p>
+                <img class="start" src="img/Stars.webp" alt="">
+            </div>
+        </div>
+    </section>
+    <!-------------->
+
+    <!--Membresias-->
+    <main class="plans">
+        <span>Distrito Tintal</span>
+        <h2>Versiculos</h2>
+        <hr>
+
+        <div class="plans-content container">
+
+            <div class="plan-1">
+                <span>Filipenses 4:13</span>
+                <h3>Traduccion Lenguaje Actual</h3>
+                <p>"Cristo me da fuerzas para enfrentarme a toda clase de situaciones."</p>
+            </div>
+
+            <div class="plan-1">
+                <span>Juan 3:16</span>
+                <h3>Reina-Valera 1960</h3>
+                <p>"Porque de tal manera amó Dios al mundo, que ha dado a su Hijo unigénito, para que todo aquel que en él cree, no se pierda, mas tenga vida eterna."</p>
+            </div>
+
+            <div class="plan-1">
+                <span>Salmos 119:105</span>
+                <h3>Palabra de Dios par Todos</h3>
+                <p>"Tu palabra es lámpara que guía mis pasos;
+                    luz que alumbra mi camino."</p>
+            </div>
+        </div>
+    </main>
+    <!-------------->
+
+    <!--Informacion Cliente-->
+    <section class="information">
+
+        <div class="information-content">
+
+            <div class="information-txt">
+                <span>Distrito Tintal</span>
+                <h2>Envia un Mensaje</h2>
+                <hr>
+                <form>
+                    <input type="text" placeholder="Nombre">
+                    <input type="text" placeholder="Mensaje">
+                    <a href="#" class="btn-1">Enviar</a>
+                </form>
+            </div>
+
+            <div class="information-img">
+                <img src="img/Name IASD.jpg" alt="">
+            </div>
+
+        </div>
+
+
+        <div class="information-content">
+
+            <div class="information-img">
+                <img src="img/BANNER IASD TINTAL.jpg"">
+            </div>
+
+            <div class="information-txt">
+                <span>Distrito Tintal</span>
+                <h2>¿Quienes Somos?</h2>
+                <hr>
+
+                <div class="service">
+                    <img src="img/Logo Arpa.png" alt="" height="50px">
+                    <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+                </div>
+
+                <div class="service">
+                    <img src="img/Logo Biblia.png" alt="" height="50px">
+                    <h3>Lorem ipsum dolor sit amet, consectetur adipisicingt.</h3>
+                </div>
+
+                <div class="service">
+                    <img src="img/Logo Paloma.png" alt="" height="50px">
+                    <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+                </div>
+
+            </div>
+
+
+        </div>
+   
+    </section>
+    <!----------------------->
+
+    <!--Ultima Infromacion-->
+    <section class="blog">
+        <span>Distrito Tintal</span>
+        <h2>!IMPORTANTE!</h2>
+
+        <div class="blog-content container">
+
+            <div class="blog-1">
+                <img src="img/Name IASD.jpg" alt="">
+                <div class="blog-txt">
+                    <span>Blog Lorem</span>
+                    <h3>Lorem ipsum dolor, sit amet consect</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste ducimus est nam voluptas, iusto,
+                        in omnis animi sapiente corporis assumenda rerum voluptatum consequatur eveniet illum? Iusto
+                        natus exercitationem et quis?</p>
+                </div>
+            </div>
+
+            <div class="blog-1">
+                <img src="img/Name IASD.jpg" alt="">
+                <div class="blog-txt">
+                    <span>Blog Lorem</span>
+                    <h3>Lorem ipsum dolor, sit amet consect</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste ducimus est nam voluptas, iusto,
+                        in omnis animi sapiente corporis assumenda rerum voluptatum consequatur eveniet illum? Iusto
+                        natus exercitationem et quis?</p>
+                </div>
+            </div>
+
+            <div class="blog-1">
+                <img src="img/Name IASD.jpg" alt="">
+                <div class="blog-txt">
+                    <span>Blog Lorem</span>
+                    <h3>Lorem ipsum dolor, sit amet consect</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste ducimus est nam voluptas, iusto,
+                        in omnis animi sapiente corporis assumenda rerum voluptatum consequatur eveniet illum? Iusto
+                        natus exercitationem et quis?</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!--------------------->
+
+    <!--Contactanos-->
+    <section class="contact">
+        <div class="contact-content">
+            <span>Distrito Tintal</span>
+            <h2>+57 55555555</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            <a href="#" class="btn-1">Informacion</a>
+        </div>
+
+    </section>
+    <!--------------->
+
+    <!--Pie de Pagina-->
+    <footer class="footer">
+
+        <div class="footer-content container">
+
+            <div class="link">
+                <h3>Loren</h3>
+                <ul>
+                    <li><a href="#">Lorem</a></li>
+                    <li><a href="#">Lorem</a></li>
+                    <li><a href="#">Lorem</a></li>
+                    <li><a href="#">Lorem</a></li>
+                </ul>
+            </div>
+
+            <div class="link">
+                <h3>Loren</h3>
+                <ul>
+                    <li><a href="#">Lorem</a></li>
+                    <li><a href="#">Lorem</a></li>
+                    <li><a href="#">Lorem</a></li>
+                    <li><a href="#">Lorem</a></li>
+                </ul>
+            </div>
+
+            <div class="link">
+                <h3>Loren</h3>
+                <ul>
+                    <li><a href="#">Lorem</a></li>
+                    <li><a href="#">Lorem</a></li>
+                    <li><a href="#">Lorem</a></li>
+                    <li><a href="#">Lorem</a></li>
+                </ul>
+            </div>
+
+            <div class="link">
+                <h3>Loren</h3>
+                <ul>
+                    <li><a href="#">Lorem</a></li>
+                    <li><a href="#">Lorem</a></li>
+                    <li><a href="#">Lorem</a></li>
+                    <li><a href="#">Lorem</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </footer>
+    <!----------------->
+
+<script src="js.js"></script>
+
+</body>
+
+</html>
