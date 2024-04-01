@@ -12,6 +12,7 @@
     <!--Links-->
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/Logo T - Naranja C.png">
+    <link rel="stylesheet" href="funcion.css">
     <!--------->
 
     <!--Otros-->
@@ -22,29 +23,88 @@
 
 <body>
 
+    <!--Mensajes Aleatorios-->
+    <div id="popup" class="popup"></div>
+    <!----------------------->
+
+    <!--Ccokies-->
+    <div id="cookie-overlay">
+        <div id="cookie-mensaje">
+            <p>Este sitio web utiliza cookies para mejorar la experiencia del usuario. Al continuar navegando por el
+                sitio, aceptas nuestro uso de cookies.</p>
+            <button id="aceptar-cookies">Aceptar</button>
+        </div>
+    </div>
+    <!---------->
+
+    <!--Anuncio-->
+    <div id="overlay">
+        <div id="mensaje">
+            <img src="img/Amanecer.jpg" alt="Imagen de información" height="350px" style="border-radius: 30px;">
+            <h2><a onclick="Enviar('amanecerconjesus')">-Amanecer con Jesús-</a></h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, earum eos magnam odit totam</p>
+            <button id="cerrar">Cerrar</button>
+        </div>
+    </div>
+    <!----------->
+
     <!--Cabezera de la Web-->
-    <header class="header">
+    <header class="header" id="header">
 
         <!--Menu de Navegacion-->
         <div class="menu container">
 
-            <a href="#" class="logo"><img src="img/Logo IASD DIstrito Tintal.png" height="50px" alt="Logo"></a>
+            <!--Logo IASD-->
+            <a href="index.html" class="logo"><img src="img/Logo IASD DIstrito Tintal.png" height="50px" alt="Logo"></a>
+            <!------------>
+
+            <!--Boton Mostrar Radio-->
+            <button class="logo" id="mostrar-reproductor" style="background-color: transparent; border: none; cursor: pointer;"><ion-icon
+                    name="radio" style="font-size: 40px; color: #FFF;"></ion-icon></button>
+            <!----------------------->
+
+            <!--Reproductor Radio-->
+            <div id="reproductor-container" class="oculto" style="align-items: center; text-align: center;">
+
+                <audio id="reproductor">
+                    <source src="https://streamall.alsolnet.com/esperanzaradio" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+
+                <img src="https://www.esperanzacolombiaradio.com/website/layout/assets/images/logoRadio.png"
+                    alt="ESPERANZA COLOMBIA RADIO" height="70px" style="cursor: pointer;" onclick="Enviar('esperanzacolombiaradio')">
+                <button id="pausar-reproductor" class="logo"
+                    style="background-color: transparent; border: none; cursor: pointer;"><ion-icon name="pause-circle"
+                        style="font-size: 50px;"></ion-icon></button>
+                <input type="range" id="volumen" min="0" max="1" step="0.1" value="1">
+                <button id="cerrar-reproductor" class="logo"
+                    style="border: none; background-color: transparent; cursor: pointer;"><ion-icon name="close-circle"
+                        style="font-size: 50px;"></ion-icon></button>
+                <img src="https://www.esperanzacolombiaradio.com/website/layout/assets/images/logoRadio.png"
+                    alt="ESPERANZA COLOMBIA RADIO" height="70px" style="cursor: pointer;" onclick="Enviar('esperanzacolombiaradio')">
+            </div>
+            <!--------------------->
+
+            <!--https://streamall.alsolnet.com/esperanzaradio-->
 
             <a href="#" class="logo" id="audioButton">
                 <img src="img/Logo Audio.png" height="50px" alt="Musica">
             </a>
-            <audio id="audio" src="audios/Y2meta.app - Él Me Levantará _ Piano _ Heaven Instrumental _ Música para Meditar _ Música Para Orar (256 kbps).mp3"></audio>
 
-            <input type="checkbox" id="menu"/>
+            <audio id="audio"
+                src="audios/Y2meta.app - Él Me Levantará _ Piano _ Heaven Instrumental _ Música para Meditar _ Música Para Orar (256 kbps).mp3"></audio>
+
+            <input type="checkbox" id="menu" />
+
             <label for="menu">
                 <img src="img/Logo Menu.png" class="menu-icono" alt="menu">
             </label>
 
             <nav class="navbar">
                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Live</a></li>
-                    <li><a href="#">Programas</a></li>
+                    <li><a href="index.html" style="color: #F56349;">Inicio</a></li>
+                    <li><a href="live.html">Live</a></li>
+                    <li><a href="programas.html">Programas</a></li>
                     <li><a href="#">Contacto</a></li>
                 </ul>
             </nav>
@@ -53,11 +113,11 @@
 
         <div class="header-content container">
             <div class="header-txt">
-                <h1>40 dias de Oración</h1>
+                <h1>Amanecer Con Jesús</h1>
                 <p>
-                    "Pasos para un Reavivamiento Espiritual"
+                    "Orando y Meditando en la Palabra de Dios"
                 </p>
-                <a href="https://www.youtube.com/watch?v=LpeqcyV5BYs&list=PLZ0yIOXiQ3mXSKLLZZ2uwHkO_1blWqOkc&ab_channel=AlexisGoitia" class="btn-1" target="_blank">Ver</a>
+                <a class="btn-1" target="_blank" onclick="Enviar('amanecerconjesus')">Ver</a>
             </div>
         </div>
 
@@ -87,7 +147,7 @@
 
             <div class="about-img">
                 <!--<img src="img/Name IASD.jpg" alt="">-->
-                <video id="miVideo" width="640" height="360" autoplay loop onclick="togglePlayPause()">
+                <video id="miVideo" width="640" height="360" loop onclick="togglePlayPause()">
                     <source src="video/Publicidad Distrito Tintal 2024.mp4" id="video" type="video/mp4">
                     Tu navegador no soporta el elemento de video.
                 </video>
@@ -104,14 +164,14 @@
         <h2>Programas</h2>
 
         <div class="testimonial-content container">
-            <div class="testimonial-1">
+            <div class="testimonial-1" id="testimonial-1" onclick="Enviar('venajesus')">
                 <img class="face" src="img/Ven a Jesus.jpg" alt="">
                 <h4>Ven a Jesús</h4>
                 <p>Programa virtual para Lideres de grupos pequeños</p>
                 <img class="start" src="img/Stars.webp" alt="">
             </div>
 
-            <div class="testimonial-1">
+            <div class="testimonial-1" id="testimonial-2" onclick="Enviar('40diasdeoracion')">
                 <img class="face" src="img/40 Dias de Oracion .jpg" alt="Logo">
                 <h4>40 dias de Oración</h4>
                 <p>Pasos para un Reavivamiento Espiritual</p>
@@ -121,24 +181,29 @@
     </section>
     <!-------------->
 
-    <!--Membresias-->
+    <!--Versiculos-->
     <main class="plans">
         <span>Distrito Tintal</span>
         <h2>Versiculos</h2>
         <hr>
 
-        <div class="plans-content container">
+        <div class="plans-content container" id="versiculosContainer">
 
             <div class="plan-1">
                 <span>Filipenses 4:13</span>
                 <h3>Traduccion Lenguaje Actual</h3>
                 <p>"Cristo me da fuerzas para enfrentarme a toda clase de situaciones."</p>
+                <p style="cursor: pointer; font-size: 20px; color: #F56349;" id="verse1">Leer</p>
+                <audio id="audioVerse1" src="audios/Filipenses_4_13.mp3"></audio>
             </div>
 
             <div class="plan-1">
                 <span>Juan 3:16</span>
                 <h3>Reina-Valera 1960</h3>
-                <p>"Porque de tal manera amó Dios al mundo, que ha dado a su Hijo unigénito, para que todo aquel que en él cree, no se pierda, mas tenga vida eterna."</p>
+                <p>"Porque de tal manera amó Dios al mundo, que ha dado a su Hijo unigénito, para que todo aquel que en
+                    él cree, no se pierda, mas tenga vida eterna."</p>
+                <p style="cursor: pointer; font-size: 20px; color: #F56349;" id="verse2">Leer</p>
+                <audio id="audioVerse2" src="audios/Juan_3_16.mp3"></audio>
             </div>
 
             <div class="plan-1">
@@ -146,13 +211,15 @@
                 <h3>Palabra de Dios par Todos</h3>
                 <p>"Tu palabra es lámpara que guía mis pasos;
                     luz que alumbra mi camino."</p>
+                <p style="cursor: pointer; font-size: 20px; color: #F56349;" id="verse3">Leer</p>
+                <audio id="audioVerse3" src="audios/Salmos_119_105.mp3"></audio>
             </div>
         </div>
     </main>
     <!-------------->
 
     <!--Informacion Cliente-->
-    <section class="information">
+    <section class="information" id="mensajes">
 
         <div class="information-content">
 
@@ -160,10 +227,14 @@
                 <span>Distrito Tintal</span>
                 <h2>Envia un Mensaje</h2>
                 <hr>
-                <form>
-                    <input type="text" placeholder="Nombre">
-                    <input type="text" placeholder="Mensaje">
-                    <a href="#" class="btn-1">Enviar</a>
+                <form action="https://formsubmit.co/iasd.tintal@gmail.com" method="POST">
+                    <input type="text" name="name" placeholder="Nombre" required>
+                    <input type="text" name="message" placeholder="Mensaje" required>
+                    <!-- <a href="#" class="btn-1">Enviar</a> -->
+                    <button type="submit" class="btn-1" style="border: 0; cursor: pointer;">Enviar</button>
+
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/">
+                    <input type="hidden" name="_captzcha" value="false">
                 </form>
             </div>
 
@@ -180,7 +251,7 @@
                 <img src="img/BANNER IASD TINTAL.jpg"">
             </div>
 
-            <div class="information-txt">
+            <div class=" information-txt">
                 <span>Distrito Tintal</span>
                 <h2>¿Quienes Somos?</h2>
                 <hr>
@@ -204,7 +275,7 @@
 
 
         </div>
-   
+
     </section>
     <!----------------------->
 
@@ -259,10 +330,30 @@
             <span>Distrito Tintal</span>
             <h2>+57 55555555</h2>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-            <a href="#" class="btn-1">Informacion</a>
+            <a class="btn-1" onclick="Enviar('mensaje')">Informacion</a>
         </div>
 
     </section>
+    <!--------------->
+
+    <!--Scroll Buttom-->
+    <button id="scrollButton" onclick="scrollToTop()"><ion-icon name="caret-up-circle"></ion-icon></button>
+    <style id="scroll">
+        #scrollButton {
+            height: 60px;
+            width: 60px;
+            font-size: 40px;
+            background-color: transparent;
+            border: none;
+            color: #F56349;
+        }
+
+        #scrollButton:hover {
+            background-color: white;
+            border-radius: 50px;
+            height: 100px;
+        }
+    </style>
     <!--------------->
 
     <!--Pie de Pagina-->
@@ -315,7 +406,8 @@
     </footer>
     <!----------------->
 
-<script src="js.js"></script>
+    <script src="Js/js.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 
 </body>
 
